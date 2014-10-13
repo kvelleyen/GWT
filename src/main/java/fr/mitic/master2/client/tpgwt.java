@@ -33,6 +33,10 @@ public class tpgwt implements EntryPoint{
 				}
 				
 				public void onFailure(Throwable arg0) {
+					Window.alert(arg0.getMessage());
+					arg0.fillInStackTrace().printStackTrace();
+					Window.alert(arg0.toString());
+					
 					// TODO Auto-generated method stub
 					
 				}

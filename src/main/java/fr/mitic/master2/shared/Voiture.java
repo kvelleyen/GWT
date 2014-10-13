@@ -1,4 +1,5 @@
 package fr.mitic.master2.shared;
+import java.io.Serializable;
 import java.util.Collection;
 
 import javax.persistence.Entity;
@@ -9,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="VOITURE")
-public class Voiture {
+public class Voiture implements Serializable {
 	
 	public int id;
 	public int nb_places;

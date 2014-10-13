@@ -8,12 +8,14 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+
 import fr.mitic.master2.client.IServices;
 import fr.mitic.master2.shared.Evenement;
 import fr.mitic.master2.shared.Personne;
 import fr.mitic.master2.shared.Voiture;
 
-public class Services implements IServices{
+public class Services extends RemoteServiceServlet implements IServices{
 	
 	EntityManager manager;
 
@@ -29,7 +31,7 @@ public class Services implements IServices{
 	}
 
 	public void creatPersonne(String name) {
-		// TODO Auto-generated method stub
+		System.err.println("pass par la");
 		EntityManagerFactory factory = Persistence
 				.createEntityManagerFactory("dev");
 		manager = factory.createEntityManager();

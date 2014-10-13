@@ -1,4 +1,5 @@
 package fr.mitic.master2.shared;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
@@ -11,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="EVENEMENT")
-public class Evenement {
+public class Evenement implements Serializable{
 
 	private int id;
 	public String lieu;

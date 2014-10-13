@@ -1,4 +1,5 @@
 package fr.mitic.master2.shared;
+import java.io.Serializable;
 import java.util.Collection;
 
 import javax.persistence.Entity;
@@ -14,7 +15,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="PERSONNE")
-public class Personne {
+public class Personne implements Serializable{
 
 	private int id;
 	public Collection<Voiture> driverOf;
@@ -23,6 +24,10 @@ public class Personne {
 	
 	public Personne(String name) {
 		this.name = name;
+	}
+	
+	public Personne() {
+		// TODO Auto-generated constructor stub
 	}
 	
 	@Id
